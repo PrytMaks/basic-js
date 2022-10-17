@@ -16,9 +16,13 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function countCats(matrix) {
   let cats = 0;
-  matrix.forEach(el => el.forEach( e => {
-    if(e === '^^') {cats += 1}
-  }));
+  matrix.forEach( e => {
+    e.forEach( e => {
+      if(e === '^^'){
+        cats += 1;
+      }
+    })
+  })
   return cats;
 }
 
